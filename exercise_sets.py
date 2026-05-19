@@ -4,9 +4,14 @@ def clean_ingredients(nombre_plato, ingredientes):
 
 
 def check_drinks(nombre_bebida, ingredientes):
+
+    alcoholes_minuscula = {alc.lower() for alc in ALCOHOLS}
+    
     for ingrediente in ingredientes:
-        if ingrediente in ALCOHOLS:
+       
+        if ingrediente.lower() in alcoholes_minuscula:
             return f"{nombre_bebida} Cocktail"
+            
     return f"{nombre_bebida} Mocktail"
 
 
