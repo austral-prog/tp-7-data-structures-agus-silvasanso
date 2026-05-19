@@ -1,5 +1,5 @@
 def clean_ingredients(nombre_plato, ingredientes):
-    # set() automáticamente elimina todos los duplicados
+    
     return (nombre_plato, set(ingredientes))
 
 
