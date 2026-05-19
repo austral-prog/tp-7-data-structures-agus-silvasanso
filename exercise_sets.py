@@ -2,11 +2,13 @@ def clean_ingredients(nombre_plato, ingredientes):
     # set() automáticamente elimina todos los duplicados
     return (nombre_plato, set(ingredientes))
 
+
 def check_drinks(nombre_bebida, ingredientes):
     for ingrediente in ingredientes:
         if ingrediente in ALCOHOLS:
             return f"{nombre_bebida} Cocktail"
     return f"{nombre_bebida} Mocktail"
+
 
 def unique_chars(texto):
     return set(texto)
