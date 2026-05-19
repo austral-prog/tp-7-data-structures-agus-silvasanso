@@ -1,19 +1,15 @@
 def clean_ingredients(nombre_plato, ingredientes):
-    
     return (nombre_plato, set(ingredientes))
-
 
 def check_drinks(nombre_bebida, ingredientes):
 
-    alcoholes_minuscula = {alc.lower() for alc in ALCOHOLS}
+    ingredientes_set = set(ingredientes)
     
-    for ingrediente in ingredientes:
-       
-        if ingrediente.lower() in alcoholes_minuscula:
-            return f"{nombre_bebida} Cocktail"
-            
-    return f"{nombre_bebida} Mocktail"
-
+  
+    if ingredientes_set.intersection(ALCOHOLS):
+        return f"{nombre_bebida} Cocktail"
+    else:
+        return f"{nombre_bebida} Mocktail"
 
 def unique_chars(texto):
     return set(texto)
